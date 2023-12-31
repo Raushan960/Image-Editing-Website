@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Editing Website</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container disable">
+      <h2> Image Editing Website</h2>
+      <div class="wrapper">
+        <div class="editor-panel">
+          <div class="filter">
+            <label class="title">Filters</label>
+            <div class="options">
+              <button id="brightness" class="active">Brightness</button>
+              <button id="saturation">Saturation</button>
+              <button id="inversion">Inversion</button>
+              <button id="grayscale">Grayscale</button>
+            </div>
+            <div class="slider">
+              <div class="filter-info">
+                <p class="name">Brighteness</p>
+                <p class="value">100%</p>
+              </div>
+              <input type="range" value="100" min="0" max="200" />
+            </div>
+          </div>
+          <div class="rotate">
+            <label class="title">Rotate & Flip</label>
+            <div class="options">
+              <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+              <button id="right">
+                <i class="fa-solid fa-rotate-right"></i>
+              </button>
+              <button id="horizontal">
+                <i class="bx bx-reflect-vertical"></i>
+              </button>
+              <button id="vertical">
+                <i class="bx bx-reflect-horizontal"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="preview-img">
+          <img src="./preview-img.jpg" alt="preview-img" />
+        </div>
+      </div>
+      <div class="controls">
+        <button class="reset-filter">Reset Filters</button>
+        <div class="row">
+          <input type="file" class="file-input" accept="image/*" hidden />
+          <button class="crop">Crop Image</button>
+          <button class="choose-img">Choose Image</button>
+          <button class="save-img">Save Image</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Copyright © 2024 by <span>Raushan Kumar</span> || All Right Reservd.</p>
+  </footer>
+    
+    <script src="./script.js"></script>
+  </body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Editing Website</title>
+   Add your CSS stylesheets and JavaScript files here 
+  <style>
+    /* Sample CSS styles 
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+    main {
+      padding: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Video Editing Website</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Upload Video</a>
+      <a href="#">Edit Video</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="videoUpload">
+      <h2>Upload Video</h2>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="video" accept="video/*">
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+    
+    <section id="videoEditor">
+      <h2>Video Editor</h2>
+      Placeholder for video playback and editing tools
+      <video controls width="400">
+        <source src="your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div>
+        Editing tools, buttons, etc.
+        <button>Trim</button>
+        <button>Add Effects</button>
+        Additional editing functionalities
+      </div>
+    </section>
+  </main>
+
+  <input type="file" id="videoInput" accept="video/*">
+  <button onclick="uploadVideo()">Upload</button>
+
+  <script>
+    function uploadVideo() {
+      const input = document.getElementById('videoInput');
+      const file = input.files[0];
+      
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const video = document.createElement('video');
+          video.src = e.target.result;
+          video.controls = true;
+          document.body.appendChild(video);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert('Please select a video file.');
+      }
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2023 Video Editing Website</p>
+  </footer>
+</body>
+</html> -->
